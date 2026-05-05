@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f5f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  gap: 15px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 80px 1fr 1fr 80px;
+  grid-template-areas: 
+    "header header header"
+    "nav    main   aside"
+    "nav    main   aside"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: #ff3385;
+  color: white;
+}
+
+.nav {
+  grid-area: nav;
+  background-color: #3b429f;
+  color: white;
+}
+
+.main {
+  grid-area: main;
+  background-color: #3b60f3;
+  color: white;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: #3b429f;
+  color: white;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #ffd269;
+  color: #2b2b2b;
+}
+
+.grid-container > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
